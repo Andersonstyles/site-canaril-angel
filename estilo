@@ -1,0 +1,454 @@
+topo:
+<div class="topo">
+
+    <header>
+        <script src="js/mudarcormenu.js"></script>
+        <nav>
+          <a class="logo" href="/">Canaril Angels</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="{{ route('site.principal') }}">Início</a></li>
+            <li><a href="{{ route('site.sobre-nos') }}">Sobre</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Fórum</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#"> <img src="img/mensagem3.png" alt="usuario"></a>
+            <li><a href="#"> <img src="img/usuario2.png" alt="usuario"></a>
+          </ul>
+        </nav>
+      </header>
+      <main></main>
+      <script src="js/mobile-navbar.js"></script>
+
+</div>
+
+
+css
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    opacity: 0.9;
+    color: blue;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #333;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+  }
+
+  main {
+    background: url("../img/asas2.png") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+
+  .nav-ativo {
+    background-color: #fff;
+    color:#333;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  .conteudo-destaque {
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+}
+
+.esquerda {
+    float:left;
+    background-color: #268fd0;
+    width: 60%;
+    height: 100%;
+}
+
+.direita {
+    float:right;
+    background-color: #2a9ee2;
+    width: 40%;
+    height: 100%;
+}
+
+.informacoes, .contato {
+    margin: 100px 40px 40px 40px;
+}
+
+.contato-principal {
+    margin: 0px 60px 60px 40px;
+}
+
+.chamada {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.video {
+    margin: 40px;
+}
+
+.video img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.conteudo-pagina {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.titulo-pagina {
+    padding: 100px 0px 60px 0px;
+    background-color: whitesmoke;
+
+}
+
+.titulo-pagina-2 {
+    padding: 70px 0px 10px 0px;
+    margin-bottom: 10px;
+    background-color: #2a9ee2;
+    text-align: center;
+
+}
+
+.informacao-pagina {
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 700px;
+    border-radius: 10px;
+    border: #fff solid 2px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 130%;
+    color: #fff;
+    background-color: #333;
+    background-size: cover;
+
+
+}
+
+.informacao-pagina-2 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    position: relative;
+    margin-top: 450px;
+    margin-left: 1100px;
+
+
+
+}
+
+.rodape {
+    width: 100%;
+
+
+}
+
+.redes-sociais, .area-contato, .localizacao {
+    width: 33.333%;
+    border-top:solid 1px #ccc;
+    float: left;
+    text-align: center;
+    background-color: #f8f8f8;
+    height: 250px;
+}
+
+.redes-sociais, .area-contato, .localizacao p, span {
+    color: #333333;
+}
+
+.redes-sociais img {
+    margin: 0px 15px 0px 15px;
+}
+
+.pagination li {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pagination ul {
+    list-style-type: none;
+}
+
+.menu {
+    min-height: 50px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    background-color: blue;
+}
+
+.menu-auxiliar {background-color:orange;}
+
+começar aqui ....................
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .center{
+    max-width: 1100px;
+    padding: 0 2%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .logo{
+    color: #ec4141;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  .menu a{
+    list-style: none;
+    display: flex;
+
+  }
+
+  header{
+    background-color: rgba(0, 0,0, 0.6);
+    height: 80px;
+  }
+
+  .menu-container{
+    width: 100%;
+    justify-content:space-around;
+    position: fixed;
+
+  }
+
+
+  .menu-container a.active-menu{
+    background-color: #ec4141;
+  }
+
+
+  .menu-container a {
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 0, 25px;
+    line-height: 80px;
+    transition: 0.8s;
+    margin-left: 25px;
+
+
+
+  }
+
+  .menu-container a:hover{
+    color: #ec4141;
+  }
+
+  section.main{
+    position: relative;
+    min-height: 800px;
+    background-image: url("../img/asas2.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-chamada{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  .text-chamada h1{
+    font-size: 30px;
+  }
+
+  .rodape {
+    width: 100%;
+    margin-top: 450px;
+
+}
+.redes-sociais, .area-contato, .localizacao {
+    width: 33.333%;
+    margin-top: 100px;
+    border-top:solid 1px #ccc;
+    float: left;
+    text-align: center;
+    background-color: #f8f8f8;
+
+}
+
+.redes-sociais, .area-contato, .localizacao p, span {
+    color: #333333;
+}
+
+.redes-sociais img {
+    margin: 0px 15px 0px 15px;
+}
+
+section.sobre-nos {
+    background-color: gainsboro;
+    padding: 20px 0;
+    text-align: center;
+}
+
+section.sobre-nos h1 {
+    font-size: 30px;
+}
+
+.descricao {
+    width: 60vh;
+    height: 50vh;
+    margin-top: 50px;
+    margin-left: 500px;
+    border-radius: 10px;
+    border: #fff solid 2px;
+    background-color:black;
+    color: #fff;
+}
+
+.descricao h3 {
+    margin-top: 20px;
+}
+
+.descricao img {
+    width: 45vh;
+    display:flex;
+    margin-top: 25px;
+    margin-left: 345px;
+    border-radius: 10px;
+    border: #fff solid 2px;
+}
+
+sobre-nós ....................
+
+
+
+
+@extends('site.layouts.basico')
+
+@section('titulo', 'Sobre')
+
+@section('conteudo')
+ <section class="sobre-nos">
+     <h1>SOBRE</h1>
+     <div class="descricao">
+
+       <h3>  Somos o Canaril Angels, formadores de canários de alta qualidade. Fundada em 17 de setembro de 2022,
+             o Canaril Angels conta com canários de cor e os SRD (canários sem raça definida). Atualmente nosso
+             plantel é composto por canários cobre clássico intenso e nevado, vermelho mosaico, ágata vermelho
+             intenso e nevado, brancos dominantes, cenoura e verde. Situado na cidade de Curvelo/MG, o Canaril Angels
+             vêm trazer principalmente qualidade e excelência na criação de canários, através de estrutura e manejos
+             específicos, a fim de obter sucesso e demonstrando todo o potencial da aves.
+       </h3>
+       <img src="{{ asset('img/canaril.png')}}">
+    </div>
+
+
+
+<section>
+
+@endsection
+
+
