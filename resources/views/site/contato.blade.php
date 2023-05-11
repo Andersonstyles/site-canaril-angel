@@ -67,7 +67,7 @@
                     <textarea type="text" class="textarea-swing-down" id="mensagem" name="mensagem" rows="3" placeholder="Mensagem" autocomplete="off" required=""></textarea>
                     <label for="mensagem"> <i class="icon icon-bubble-4"></i> </label>
                 </span>
-                <input type="hidden" name="_next" value="http://localhost:8000/"/>
+                <input type="hidden" name="_next" value="{{env('APP_URL')}}"/>
                 <div class="box-btn">
 
                     <button type="submit" class="btn-3d">
